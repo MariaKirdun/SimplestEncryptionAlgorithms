@@ -17,7 +17,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        when (v?.id) {
+            R.id.encryptButton ->
+                Toast.makeText(this,"Encrypt", Toast.LENGTH_SHORT).show()
+            R.id.decryptButton ->
+                Toast.makeText(this,"Decrypt", Toast.LENGTH_SHORT).show()
+        }
     }
 
     fun onRadioButtonClicked(view: View) {
@@ -49,9 +54,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     if (checked) {
                         algorithm = PlayfairEncryption()
                     }
-
-                else -> Toast.makeText(this,"Please choose algorithm", Toast.LENGTH_SHORT).show()
-
             }
         }
     }

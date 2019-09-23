@@ -171,7 +171,8 @@
             app:layout_constraintEnd_toStartOf="@+id/decryptButton"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/keyEditText" />
+            app:layout_constraintTop_toBottomOf="@+id/keyEditText"
+            android:onClick="onClick"/>
 
     <Button
             android:id="@+id/decryptButton"
@@ -184,7 +185,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/encryptButton"
-            app:layout_constraintTop_toTopOf="@+id/encryptButton" />
+            app:layout_constraintTop_toTopOf="@+id/encryptButton"
+            android:onClick="onClick"/>
 
     <TextView
             android:id="@+id/resultTextView"
