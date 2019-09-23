@@ -61,6 +61,7 @@ class MainActivity : AppCompatActivity() {
                     if (checked) {
 
                     }
+
                 else -> Toast.makeText(this,"Please choose algorithm", Toast.LENGTH_SHORT).show()
 
             }
