@@ -64,64 +64,70 @@
             app:layout_constraintTop_toBottomOf="@+id/enterAlgorithmTextView">
 
         <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/railwayFenceRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:text="@string/railway_fence"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/columnMethodRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:text="@string/column_method"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/vigenereDirectRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:text="@string/vigenere_direct"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
-                android:id="@+id/radioButton4"
+                android:id="@+id/vigenereProgressiveRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:text="@string/vigenere_progressive"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
-                android:id="@+id/radioButton5"
+                android:id="@+id/vigenereSelfGeneratedRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:text="@string/vigenere_self_generated"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
-                android:id="@+id/radioButton6"
+                android:id="@+id/playfairRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:text="@string/playfair"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:onClick="onRadioButtonClicked"/>
     </RadioGroup>
 
     <TextView
