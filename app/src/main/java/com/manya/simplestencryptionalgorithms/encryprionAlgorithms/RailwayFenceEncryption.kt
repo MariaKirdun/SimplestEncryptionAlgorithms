@@ -1,16 +1,24 @@
 package com.manya.simplestencryptionalgorithms.encryprionAlgorithms
 
+import com.manya.simplestencryptionalgorithms.exceptions.IncorrectKeyException
+
 class RailwayFenceEncryption :
     Encryption {
 
 
     override fun encrypt(message : String, key : String) : String{
         var result = ""
-        for (i in 0 until key as Int){
+        var keyInt = 0
+        try {
+            keyInt = Integer.parseInt(key)
+        } catch (exp : Exception){
+            throw IncorrectKeyException("incorrect key")
+        }
+        for (i in 0 until keyInt){
             var j = i
             while (j < message.length){
                 result += message[j]
-                j += key
+                j += keyInt
             }
         }
         return result
@@ -19,7 +27,13 @@ class RailwayFenceEncryption :
     override fun decrypt(message : String, key : String) : String{
         var result = ""
         var mes = message
-        if (message.length % key as Int != 0) {
+        var keyInt = 0
+        try {
+            keyInt = Integer.parseInt(key)
+        } catch (exp : Exception){
+            throw IncorrectKeyException("incorrect key")
+        }
+        if (message.length % keyInt != 0) {
             mes += " "
         }
         val midPoint = mes.length / 2
