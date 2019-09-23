@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SimplestEncryptionAlgorithms</string>
+    <string name="enter_word">Please, enter a word</string>
+    <string name="enter_algorithm">Please, choose algorithm of encryption</string>
+    <string name="enter_key">Please, enter a key of encryption</string>
+
+    <string name="encrypt">Encrypt</string>
+    <string name="decrypt">Decrypt</string>
+    
+    <string name="railway_fence">Railway Fence</string>
+    <string name="column_method">Column Method</string>
+    <string name="vigenere_direct">Algorithm Vigenere with direct key</string>
+    <string name="vigenere_progressive">Algorithm Vigenere with progressive key</string>
+    <string name="vigenere_self_generated">Algorithm Vigenere with self-generated key</string>
+    <string name="playfair">Playfair Cipher</string>
+
+</resources>
