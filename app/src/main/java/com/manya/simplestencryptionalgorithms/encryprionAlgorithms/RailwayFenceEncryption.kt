@@ -1,11 +1,12 @@
-package com.manya.simplestencryptionalgorithms
+package com.manya.simplestencryptionalgorithms.encryprionAlgorithms
 
-class RailwayFenceEncryption (private val message : String, private val key : Int) {
+class RailwayFenceEncryption :
+    Encryption {
 
 
-    fun encrypt() : String{
+    override fun encrypt(message : String, key : String) : String{
         var result = ""
-        for (i in 0 until key){
+        for (i in 0 until key as Int){
             var j = i
             while (j < message.length){
                 result += message[j]
@@ -15,10 +16,10 @@ class RailwayFenceEncryption (private val message : String, private val key : In
         return result
     }
 
-    fun decrypt() : String{
+    override fun decrypt(message : String, key : String) : String{
         var result = ""
         var mes = message
-        if (message.length % key != 0) {
+        if (message.length % key as Int != 0) {
             mes += " "
         }
         val midPoint = mes.length / 2
