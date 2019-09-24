@@ -24,22 +24,23 @@ class RailwayFenceEncryption : Encryption {
     }
 
     override fun decrypt(message : String, key : String) : String{
-        var result = ""
-        var mes = message
-        var keyInt = 0
+        val mes = CharArray(message.length) {' '}
+        val keyInt : Int
         try {
             keyInt = Integer.parseInt(key)
         } catch (exp : Exception){
             throw IncorrectKeyException("incorrect key")
         }
-        if (message.length % keyInt != 0) {
-            mes += " "
+        var mesIter = 0
+        for (i in 0 until keyInt){
+            var j = i
+            while (j < message.length){
+                mes[j] = message[mesIter]
+                j += keyInt
+                mesIter++
+            }
         }
-        val midPoint = mes.length / 2
-        for (i in 0 until midPoint - 1){
-            result += mes[i] + "" + mes[i + midPoint] + mes[i + 2*midPoint]
-        }
-        return result
+        return String(mes)
     }
 
 }
