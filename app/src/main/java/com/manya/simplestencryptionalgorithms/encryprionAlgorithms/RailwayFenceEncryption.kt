@@ -31,13 +31,13 @@ class RailwayFenceEncryption : Encryption {
         } catch (exp : Exception){
             throw IncorrectKeyException("incorrect key")
         }
-        var mesIter = 0
+        var mesIterator = 0
         for (i in 0 until keyInt){
             var j = i
             while (j < message.length){
-                mes[j] = message[mesIter]
+                mes[j] = message[mesIterator]
                 j += keyInt
-                mesIter++
+                mesIterator++
             }
         }
         return String(mes)
