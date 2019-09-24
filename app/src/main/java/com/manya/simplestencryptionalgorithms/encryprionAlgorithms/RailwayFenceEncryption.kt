@@ -2,8 +2,7 @@ package com.manya.simplestencryptionalgorithms.encryprionAlgorithms
 
 import com.manya.simplestencryptionalgorithms.exceptions.IncorrectKeyException
 
-class RailwayFenceEncryption :
-    Encryption {
+class RailwayFenceEncryption : Encryption {
 
 
     override fun encrypt(message : String, key : String) : String{

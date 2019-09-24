@@ -14,28 +14,23 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var algorithm : Encryption? = null
     private var message : String = ""
     private var key : String = ""
+    private var result : String? = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
 
-    override fun onResume() {
-        super.onResume()
-
-        message = wordEditText.text.toString()
-        key = keyEditText.text.toString()
-
-    }
-
     override fun onClick(v: View?) {
         try {
+            readData()
             when (v?.id) {
                 R.id.encryptButton ->
-                    algorithm?.encrypt(message, key)
+                    result = algorithm?.encrypt(message, key)
                 R.id.decryptButton ->
-                    algorithm?.decrypt(message, key)
+                    result = algorithm?.decrypt(message, key)
             }
+            updateResult()
         } catch (e : IncorrectKeyException) {
             Toast.makeText(this,"Please enter correct key", Toast.LENGTH_SHORT).show()
         }
@@ -72,6 +67,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     }
             }
         }
+    }
+
+    private fun updateResult(){
+        resultTextView.text = result
+    }
+
+    private fun readData(){
+        message = wordEditText.text.toString()
+        key = keyEditText.text.toString()
     }
 
 }
